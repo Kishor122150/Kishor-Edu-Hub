@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
+      /* pdf design section */
         /* Style for the download button */
         .pdf-download-button {
             display: inline-block;
@@ -33,15 +34,24 @@
     .pdfsection{
  margin-left: 200px;
     }
-    /* form  */
+
+
+    /* form  section*/
+    #contact{
+      display: flex;
+            justify-content: center;
+            align-items: center;
+    }
         /* Container for the contact form */
         #contact-container {
+         margin-top: 200px;
             background-color: #ffffff; /* White background */
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 400px;
+          
         }
 
         /* Form title */
@@ -108,10 +118,119 @@
             transform: scale(0.98); /* Slightly shrink on click */
         }
 
+
+/* our team  section*/
+   /* Container to center the box */
+   
+   .container2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80%;
+        }
+
+        /* Square box styling */
+        .box2 {
+            width: 600px;
+            height: 800px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Photo section styling */
+        .photo-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0e0e0;
+        }
+
+        .photo-section img {
+            max-width: 100%;
+            max-height:100%;
+            object-fit: cover;
+        }
+
+        /* Text section styling */
+        .text-section {
+            /* flex: 1; */
+            padding: 15px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            text-align: center;
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            font-weight: 700;
+        }
+
+        .text-section p {
+            margin: 0;
+            color: #333;
+        }
+
+
+/* box and image styling  */
+         /* Container styling */
+         .container3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 90vh;
+        }
+
+        /* Text box styling */
+        .text-box {
+            flex: 1;
+            padding: 20px;
+            /* background-color: #fff; */
+            /* border: 1px solid #ccc; */
+            margin-right: 20px;
+            /* margin-left: 20px; */
+        }
+
+        .text-box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .text-box p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Image box styling */
+        .image-box {
+            flex: 1;
+            /* padding: 20px; */
+            /* background-color: #fff; */
+            border: 1px solid #ccc;
+            border: none;
+            /* border-radius: 50px; */
+        }
+
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 60%;
+        }
+
     </style>
 
 </head>
 <body>
+  <!-- navbar section  -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary ">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" style="color: #7542f5; font-weight: 700; text-transform: uppercase; font-style: italic;">Kishor-Edu-HUb-Nepal</a>
@@ -124,7 +243,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">our Team</a>
+                <a class="nav-link" href="#team">our Team</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -140,7 +259,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link " aria-disabled="true" href="#contact">contact</a>
+                <a class="nav-link "  href="#contact">contact</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -152,6 +271,28 @@
       </nav>
 
     </div>
+
+<section id="home-photo-text" style="height: 120vh;">
+    <!-- box and image section  -->
+    <div class="container3">
+      <!-- Text Box -->
+      <div class="text-box">
+         
+          <h1 style="font-weight: 700";>Think Greater</h1>
+        <h1>Learn Faster</h1>
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan tortor. Nulla facilisi. Vivamus lacinia odio vitae vestibulum vestibulum.</p> -->
+      <p>You all are free to Learn and Explore.</p>
+        </div>
+
+      <!-- Image Box -->
+      <div class="image-box">
+          <img src="./kishorprofile.jpeg" alt="Placeholder Image">
+      </div>
+  </div>
+</section>
+
+
+    <!-- pdf section 
     
     <section class="pdfsection">
 
@@ -165,7 +306,27 @@
         <p>Click the button below to download the PDF file:</p>
         <a href="locialcircuit.pdf" download class="pdf-download-button">Download PDF</a>
     
+    </section> -->
+
+
+<!-- ouur team section  -->
+    <section id="team" style="height: 100vh;">
+      <div class="container2" >
+        <div class="box2">
+            <div class="photo-section">
+                <img src="./kishor.jpeg.jpeg" alt="Placeholder Image">
+            </div>
+            <div class="text-section">
+              <h1 style="text-align: center;">Kishor Raut</h1> <br>
+                <!-- <p>This is some sample text inside the square box. You can replace this text with your own content.</p> -->
+                 <p style="padding-bottom: 10px;">Founder and Developer</p>
+            </div>
+        </div>
+    </div>
     </section>
+
+
+<!-- contact form section  -->
       <section id="contact">
         <div id="contact-container">
             <h1 class="form-title">Contact Us</h1>
