@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ctevt-Diploma</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        /* General styles */
+        /* body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        } */
+
+        /* Container for the boxes */
+        .box-container {
+            margin-top: 100px;
+            margin-left: 600px;
+            display: flex;
+            flex-direction: column; /* Arrange boxes in a column */
+            gap: 20px; /* Space between boxes */
+            width: 300px; /* Width of the container */
+        }
+
+        /* Individual box styles */
+        .box {
+            background-color: #bc1919; /* Blue background */
+            color: white; /* White text */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            text-align: center; /* Center text */
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+        }
+        .box-container a{
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Hover effect */
+        .box:hover {
+            transform: translateY(-5px); /* Move box up slightly */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Increase shadow */
+        }
+        #Semister-1{
+            height: 100vh;
+            /* background-color: #bc1919; */
+        }
+        #Semister-2{
+            height: 100vh;
+            background-color: #1999bc;
+        }
+        #Semister-3{
+            height: 100vh;
+            background-color: #d4aa20;
+        }
+        #Semister-4{
+            height: 100vh;
+            background-color: #231c1c;
+        }
+        #Semister-5{
+            height: 100vh;
+            background-color: #b715a4;
+        }
+        #Semister-6{
+            height: 100vh;
+            background-color: #777171;
+        }
+        #Semister-7{
+            height: 100vh;
+            background-color: #19bc47;
+        }
+        .box-container1{
+            /* padding-top: 30px; */
+            /* margin-top: 100px; */
+            margin-left: 550px;
+            display: flex;
+            flex-direction: column; /* Arrange boxes in a column */
+            gap: 15px; /* Space between boxes */
+            width: 400px; /* Width of the container */
+        }
+.box-container1 .box1{
+    /* padding-top: 20px; */
+    background-color: #bc1919; /* Blue background */
+            color: white; /* White text */
+            padding: 15px;
+            border-radius: 10px; /* Rounded corners */
+            text-align: center; /* Center text */
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+.box-container1 a{
+    color: white;
+            text-decoration: none;
+            font-weight: 700;
+}
+.subject-design{
+    /* text-align: center; */
+    margin-left: 550px;
+
+    padding-top: 80px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 35px;
+}
+/* form  */
+        /* Container for the contact form */
+        #contact-container {
+            background-color: #ffffff; /* White background */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Form title */
+        .form-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Input fields */
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-field:focus {
+            border-color: #007BFF; /* Blue border on focus */
+        }
+
+        /* Textarea */
+        #message-box {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            font-size: 16px;
+            resize: vertical; /* Allow vertical resizing */
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        #message-box:focus {
+            border-color: #007BFF; /* Blue border on focus */
+        }
+
+        /* Submit button */
+        #submit-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF; /* Blue background */
+            color: #ffffff; /* White text */
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #submit-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Optional: Add a small animation to the button */
+        #submit-button:active {
+            transform: scale(0.98); /* Slightly shrink on click */
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color: #7542f5; font-weight: 700; text-transform: uppercase; font-style: italic;">Kishor-Edu-HUb-Nepal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./Kishor-Edu-hub.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">our Team</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  course
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Management</a></li>
+                  <li><a class="dropdown-item" href="#">science</a></li>
+                  <!-- <li><hr class="dropdown-divider"></li> -->
+                  <li><a class="dropdown-item" href="./ctevt-diploma.html"> Ctevt-Diploma</a></li>
+                  <li><a class="dropdown-item" href="#">All Engineering</a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-disabled="true" href="#contact">contact</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    
+    <div class="box-container">
+        <a href="#Semister-1"><div class="box">Semister-1 </div></a> 
+        <a href="#Semister-2">  <div class="box">Semister-2</div></a>
+        <a href="#Semister-2">  <div class="box">Semister-3</div></a>
+        <a href="#Semister-2"> <div class="box">Semister-4</div></a>
+        <a href="#Semister-2"> <div class="box">Semister-5</div></a>
+        <a href="#Semister-2"> <div class="box">Semister-6</div></a>
+    </div>
+    <section id="Semister-1">
+       <h1 class="subject-design">Semister-1:subjects</h1>
+        <div class="box-container1">
+            <a href="#Semister-1"><div class="box1">Math </div></a> 
+            <a href="#Semister-2">  <div class="box1">Physic</div></a>
+            <a href="#Semister-2">  <div class="box1">chemestry</div></a>
+            <a href="#Semister-2"> <div class="box1">Nepali</div></a>
+            <a href="#Semister-2"> <div class="box1">English</div></a>
+            <a href="#Semister-2"> <div class="box1">Computer Application</div></a>
+            <a href="#Semister-2"> <div class="box1">Engineering Drawing</div></a>
+
+        </div>
+    </section>
+    <section id="Semister-2">
+        <h1 class="subject-design">Semister-2:subjects</h1>
+
+        <div class="box-container1">
+            <a href="#Semister-1"><div class="box1">Semister-1 </div></a> 
+            <a href="#Semister-2">  <div class="box1">Semister-2</div></a>
+            <a href="#Semister-2">  <div class="box1">Semister-3</div></a>
+            <a href="#Semister-2"> <div class="box1">Semister-4</div></a>
+            <a href="#Semister-2"> <div class="box1">Semister-5</div></a>
+            <a href="#Semister-2"> <div class="box1">Semister-6</div></a>
+        </div>
+    </section>
+    <section id="Semister-3">
+        <h1 class="subject-design">Semister-1:subjects</h1>
+
+        <div class="box-container1">
+            <a href="#Semister-1"><div class="box1">Math</div></a> 
+            <a href="#Semister-2">  <div class="box1">web Technology 1</div></a>
+            <a href="#Semister-2">  <div class="box1">c programming</div></a>
+            <a href="#Semister-2"> <div class="box1">software Engineering</div></a>
+            <a href="#Semister-2"> <div class="box1">discreate structure</div></a>
+            <a href="#Semister-2"> <div class="box1">Digital logic</div></a>
+            <a href="#Semister-2"> <div class="box1">basic electrical</div></a>
+
+        </div>
+    </section>
+    <section id="Semister-4">
+        <h1 class="subject-design">Semister-1:subjects</h1>
+
+        <div class="box-container1">
+            <a href="#Semister-1"><div class="box1">Semister-1 </div></a> 
+            <a href="#Semister-2">  <div class="box1">Semister-2</div></a>
+            <a href="#Semister-2">  <div class="box1">Semister-3</div></a>
+            <a href="#Semister-2"> <div class="box1">Semister-4</div></a>
+            <a href="#Semister-2"> <div class="box1">Semister-5</div></a>
+            <a href="#Semister-2"> <div class="box1">Semister-6</div></a>
+        </div>
+    </section>
+    <section id="Semister-5">
+        <h1 class="subject-design">Semister-1:subjects</h1>
+
+        <div class="box-container1">
+            <a href="#Semister-1"><div class="box1">Semister-1 </div></a> 
+            <a href="#Semister-2">  <div class="box1">Semister-2</div></a>
+            <a href="#Semister-2">  <div class="box1">Semister-3</div></a>
+            <a href="#Semister-2"> <div class="box1">Semister-4</div></a>
+            <a href="#Semister-2"> <div class="box1">Semister-5</div></a>
+            <a href="#Semister-2"> <div class="box1">Semister-6</div></a>
+        </div>
+    </section>
+    <section id="Semister-6">
+        <h1 class="subject-design">Semister-1:subjects</h1>
+
+        <div class="box-container1">
+            <a href="#Semister-1"><div class="box1">Semister-1 </div></a> 
+            <a href="#Semister-2">  <div class="box1">Semister-2</div></a>
+            <a href="#Semister-2">  <div class="box1">Semister-3</div></a>
+            <a href="#Semister-2"> <div class="box1">Semister-4</div></a>
+            <a href="#Semister-2"> <div class="box1">Semister-5</div></a>
+            <a href="#Semister-2"> <div class="box1">Semister-6</div></a>
+        </div>
+    </section>
+    <section id="contact">
+        <div id="contact-container">
+            <h1 class="form-title">Contact Us</h1>
+            <form>
+                <!-- Name field -->
+                <input type="text" id="name-field" class="input-field" placeholder="Your Name" required>
+    
+                <!-- Email field -->
+                <input type="email" id="email-field" class="input-field" placeholder="Your Email" required>
+    
+                <!-- Message field -->
+                <textarea id="message-box" class="input-field" rows="5" placeholder="Your Message" required></textarea>
+    
+                <!-- Submit button -->
+                <button type="submit" id="submit-button">Send Message</button>
+            </form>
+        </div>
+      </section>
+
+   
+</body>
+</html>
